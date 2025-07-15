@@ -1,0 +1,96 @@
+@use '../styles/variables' as *;
+
+.badge {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 15px;
+}
+
+.skill-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+
+    .card-img-top {
+        object-fit: cover;
+        object-position: top left;
+        width: 100%;
+        height: 180px;
+    }
+
+    .project-link {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        z-index: 10;
+        border-radius: 0.5rem;
+        padding: 0.25rem 0.5rem;
+        transition: all 0.2s ease;
+        border-color: transparent;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+
+        .link-text {
+            opacity: 0;
+            max-width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            transition: all 0.15s ease-in;
+        }
+    }
+
+    .card-content-default {
+        transition: all 0.3s ease;
+        z-index: 1;
+    }
+
+    .card-content-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(5, 15, 25, 0.85);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 5;
+        backdrop-filter: blur(4px);
+    }
+
+    &:hover {
+        .card-content-hover {
+            opacity: 1;
+        }
+
+        .card-content-default {
+            filter: blur(4px);
+            transform: translateY(-5px);
+        }
+
+        .project-link {
+            .link-text {
+                opacity: 1;
+                max-width: 200px;
+                margin-left: 0.25rem;
+            }
+        }
+    }
+}

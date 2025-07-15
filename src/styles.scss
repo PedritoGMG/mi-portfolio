@@ -1,0 +1,101 @@
+@use '../src/styles/variables' as *;
+@use "sass:color" as color;
+
+.text-xl {
+  font-size: 2rem;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 4rem;
+  }
+}
+
+.vertical-align {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.description-color {
+  color: rgb(221, 221, 221);
+}
+
+.gradient-text {
+  background: $degradado;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(0, 224, 175, 0.5),
+               0 0 20px rgba(0, 200, 255, 0.4),
+               0 0 40px rgba(0, 115, 255, 0.3);
+}
+
+.info_item {
+  width: 72.5vw;
+  height: 100%;
+  padding: 1rem;
+  //background-color: #6d2727 !important;
+
+  @media (min-width: 576px) {
+    width: 73vw;
+  }
+
+  @media (min-width: 768px) {
+    width: 75vw;
+  }
+
+  @media (min-width: 992px) {
+    width: 77vw;
+  }
+}
+.info_item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.horizontal-line {
+  margin: 1rem auto;
+  width: 30vw; // que se adapte en móviles
+  height: 0.25rem;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+.horizontal-line-title {
+  margin: 1rem auto;
+  width: 50vw;
+  max-width: 35rem;
+  height: 0.25rem;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+.vertical-line {
+  margin: 1rem auto;
+  height: 16rem;
+  width: 0.25rem;
+  border-radius: 1rem;
+  background-color: white;
+  display: none;
+  @media (min-width: 992px) {
+    display: block;
+  }
+}
+
+.network-icons {
+
+    display: inline-block;
+    transition: transform 0.15s ease;
+
+    &:hover {
+        text-shadow: 0 0 10px rgba(0, 224, 175, 0.5),
+                0 0 20px rgba(0, 200, 255, 0.4),
+                0 0 40px rgba(0, 115, 255, 0.3);
+        transform: scale(1.15);
+        }
+}
