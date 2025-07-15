@@ -1,0 +1,64 @@
+<div
+  class="info_item"
+>
+  <div class="d-flex flex-column align-items-start">
+    <div class="content-wrapper">
+      <div class="text-xl fw-bold justify-content-start align-items-start m-0 align-self-start">
+        <div
+          class="d-flex align-middle justify-content-start align-items-center gap-3"
+        >
+          <picture
+            class="d-flex align-middle justify-content-center align-items-center"
+          >
+            <source
+              srcset="
+                https://fonts.gstatic.com/s/e/notoemoji/latest/1f331/512.webp
+              "
+              type="image/webp"
+            />
+            <img
+              src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f331/512.gif"
+              alt="🌱"
+              width="64"
+              height="64"
+            />
+          </picture>
+          <p class="fs-1 m-0" translate>skills.title</p>
+        </div>
+      </div>
+
+      <div class="horizontal-line-title"></div>
+    </div>
+
+    <p class="description-color fs-5 text-start" translate>skills.description</p>
+    <div
+      class="d-flex flex-column flex-lg-row justify-content-center align-items-center align-items-lg-start gap-1 container text-center"
+    >
+      @for (stack of technologies; track $index) {
+      <div class="d-flex flex-column align-items-center">
+        <h4 class="pt-1 pb-1 pt-lg-3 pb-lg-3 m-0">{{ 'skills.categories.' + stack.key | translate }}</h4>
+        <div class="row text-center mb-0 mb-lg-4 responsive-mobile m-2">
+          @for (technologie of stack.items; track $index) {
+          <div class="col-3 col-lg-6 mb-2 mt-2 mb-lg-3 mt-lg-0">
+            <div
+              class="d-flex flex-column align-items-center justify-content-center icon-item"
+            >
+              <img
+                [src]="'assets/svg/' + technologie.icon"
+                [alt]="technologie.name"
+                class="mb-2 skill-icon"
+              />
+              <div class="description-color fw-bold text-wrap">
+                {{ technologie.name }}
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+      @if ($index!==technologies.length-1) {
+      <div class="vertical-line align-self-center"></div>
+      } }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+{
+  "header": {
+    "title": "My Portfolio",
+    "home": "Home",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "carousel": {
+    "slide": "Slide {{num}}",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "presentation": {
+    "hello": "Hello!, I am",
+    "roles": {
+      "fullstack": "Full Stack Developer",
+      "desktop_mobile": "Focused on <b>Desktop</b> and <b>Mobile</b> Apps",
+      "web_api": "With experience in <b>Web</b> and <b>REST APIs</b>"
+    },
+    "about": "Recently graduated in Multiplatform Application Development, eager to join the industry and contribute my knowledge and skills."
+  },
+  "social": {
+    "github": "GitHub Profile",
+    "linkedin": "LinkedIn Profile"
+  },
+  "skills": {
+    "title": "My Skills",
+    "description": "🛠️ These are the technologies and tools I truly master. I have included only the ones I handle with confidence and expertise.",
+    "categories": {
+      "java_android": "🧩 Java & Android Development",
+      "web": "🌐 Web Development",
+      "databases": "🗄️ Databases",
+      "tools": "✨ Extras / Tools"
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "📂 These are some of the projects I have developed. <b>Hover over them to see more details!</b>",
+    "goToRepo": "Go to Repository",
+    "transfernow": {
+      "title": "TransferNow - FTP System",
+      "description": "Recreation of an FTP system with Spring. It has a system to organize and manage the files you want to upload and allows you to share them via open ports, as well as accept file requests from external users."
+    },
+    "rutas_cda": {
+      "title": "RutasCdA - App",
+      "description": "App where users follow physical routes using geolocation, scan QR codes at locations, and solve puzzles. Everything is stored in the cloud, keeping an active record of user progress."
+    },
+    "library_web": {
+      "title": "Library Management Web App",
+      "description": "Web application to manage books, categories, and authors through complete CRUD operations with ASP.NET. Includes a login system with roles and permissions to differentiate administrators from users, ensuring secure and efficient access control."
+    }
+  },
+  "contact": {
+    "title": "My Contacts",
+    "description": "💬 You have several options to get in touch with me. Choose the one that suits you best!",
+    "methods": {
+      "email": {
+        "title": "Email",
+        "text": "Send me an email directly",
+        "button": {
+          "copy": "Copy Email",
+          "copied": "Copied!"
+        }
+      },
+      "linkedin": {
+        "text": "Let's connect professionally",
+        "button": "Visit Profile"
+      },
+      "github": {
+        "text": "Check out my projects",
+        "button": "View Repositories"
+      }
+    }
+  }
+}
