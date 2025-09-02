@@ -11,6 +11,9 @@
   width: 150px;
   height: 150px;
 
+  opacity: 1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+
   @media (min-width: 576px) {
     width: 200px;
     height: 200px;
@@ -29,6 +32,16 @@
   &:hover {
     transform: scale(1.095);
   }
+}
+
+.logo.fade-out {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.logo.fade-in {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .content-wrapper.responsive {

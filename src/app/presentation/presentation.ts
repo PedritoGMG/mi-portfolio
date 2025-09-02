@@ -11,6 +11,11 @@ import Typed from 'typed.js';
 export class Presentation implements AfterViewInit {
 
   @ViewChild('typed', { static: true }) typedTextElement!: ElementRef;
+  currentImage: string = 'assets/images/yo.png';
+  images: string[] = [
+    'assets/images/yo.png',
+    'https://avatars.githubusercontent.com/u/146210335?v=4'
+  ];
 
   ngAfterViewInit(): void {
     const options = {
@@ -20,9 +25,29 @@ export class Presentation implements AfterViewInit {
     ],
       typeSpeed: 75,
       backSpeed: 50,
-      loop: true
+      backDelay: 3000,
+      startDelay: 500,
+      loop: true,
+      onStringTyped: (arrayPos: number) => {
+        this.changeImage(arrayPos);
+      }
     };
 
     new Typed(this.typedTextElement.nativeElement, options);
+  }
+
+  changeImage(index: number): void {
+    const imgEl = document.querySelector('.logo') as HTMLImageElement;
+    if (!imgEl || this.images[index] === this.currentImage) return;
+
+    imgEl.classList.add('fade-out');
+    imgEl.classList.remove('fade-in');
+
+    imgEl.addEventListener('transitionend', () => {
+      this.currentImage = this.images[index];
+
+      imgEl.classList.remove('fade-out');
+      imgEl.classList.add('fade-in');
+    }, { once: true });
   }
 }
