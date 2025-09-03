@@ -43,11 +43,18 @@ export class Presentation implements AfterViewInit {
     imgEl.classList.add('fade-out');
     imgEl.classList.remove('fade-in');
 
-    imgEl.addEventListener('transitionend', () => {
-      this.currentImage = this.images[index];
+    const transitionDuration = 500;
+    let fallback: ReturnType<typeof setTimeout>;
 
+    const onTransitionEnd = () => {
+      clearTimeout(fallback);
+      this.currentImage = this.images[index];
       imgEl.classList.remove('fade-out');
       imgEl.classList.add('fade-in');
-    }, { once: true });
+    };
+
+    imgEl.addEventListener('transitionend', onTransitionEnd, { once: true });
+
+    fallback = setTimeout(onTransitionEnd, transitionDuration);
   }
 }

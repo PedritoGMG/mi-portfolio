@@ -42,6 +42,9 @@
 .logo.fade-in {
   opacity: 1;
   transform: translateX(0);
+  &:hover {
+    transform: scale(1.095);
+  }
 }
 
 .content-wrapper.responsive {
