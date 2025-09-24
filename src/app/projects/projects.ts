@@ -46,6 +46,16 @@ export class Projects {
       { name: "MySQL", icon: "mysql.svg" }
     ],
     link: "https://github.com/PedritoGMG/LibreriaPM"
+  },
+  {
+    key: 'gmg-funmenu',
+    title: "GMG-FunMenu - Programa de Sonidos y TTS",
+    description: "Programa de escritorio en JavaFX que permite a los jugadores activar sonidos, música o TTS en tiempo real mediante comandos en el juego. Incluye soporte para YouTube, mezclador de audio, sonidos personalizados y keybinds. Funciona de forma segura leyendo el log del juego, sin manipular la memoria y con control de administradores.",
+    image: "assets/projects/funmenu.png",
+    technologies: [
+      { name: "JavaFX", icon: "java.svg" }
+    ],
+    link: "https://github.com/PedritoGMG/GMG-FunMenu"
   }
 ];
 
