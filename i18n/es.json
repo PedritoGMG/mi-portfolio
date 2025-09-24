@@ -50,6 +50,10 @@
     "library_web": {
       "title": "Gestión de Librería Web",
       "description": "Aplicación web para gestionar libros, categorías y autores mediante operaciones CRUD completas con ASP.NET. Incluye un sistema de login con roles y permisos para diferenciar administradores de usuarios, garantizando un control de acceso seguro y eficiente."
+    },
+    "gmg-funmenu": {
+      "title": "GMG-FunMenu - Programa de Sonidos y TTS",
+      "description": "Programa que permite a los jugadores activar sonidos, música o TTS en tiempo real mediante comandos en el juego. Incluye soporte para YouTube, mezclador de audio, sonidos personalizados y keybinds. Funciona de forma segura leyendo el log del juego, sin manipular la memoria y con control de administradores."
     }
   },
   "contact": {

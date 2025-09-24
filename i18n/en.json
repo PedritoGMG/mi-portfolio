@@ -50,6 +50,10 @@
     "library_web": {
       "title": "Library Management Web App",
       "description": "Web application to manage books, categories, and authors through complete CRUD operations with ASP.NET. Includes a login system with roles and permissions to differentiate administrators from users, ensuring secure and efficient access control."
+    },
+    "gmg-funmenu": {
+      "title": "GMG-FunMenu - Sound & TTS Program",
+      "description": "Desktop program in JavaFX that allows players to trigger sounds, music, or TTS in real-time via in-game commands. Supports YouTube, audio mixer, custom sounds, and keybinds. Operates safely by reading the game log, without manipulating memory, and includes administrator controls."
     }
   },
   "contact": {
