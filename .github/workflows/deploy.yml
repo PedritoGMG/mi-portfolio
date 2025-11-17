@@ -1,21 +1,24 @@
-name: Deploy Angular
-
+name: Build and Deploy
 on:
   push:
     branches:
-      - main
+      - master
+  workflow_dispatch:
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: All things angular
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
+      with:
+        github_access_token: ${{ secrets.GITHUB_TOKEN }}
+        build_configuration: staging
+        base_href: /mi-portfolio/
+        deploy_branch: gh-pages
+        angular_dist_build_folder: dist/mi-portfolio/browser
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - id: build-publish
-        uses: bitovi/github-actions-angular-to-github-pages@v1.0.0
-        with:
-          path: dist/mi-portfolio/browser
-          caching: true
+  contents: write
