@@ -15,7 +15,6 @@ jobs:
       uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
       with:
         github_access_token: ${{ secrets.GITHUB_TOKEN }}
-        build_configuration: staging
         base_href: /mi-portfolio/
         deploy_branch: gh-pages
         angular_dist_build_folder: dist/mi-portfolio/browser
