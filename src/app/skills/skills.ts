@@ -45,6 +45,7 @@ export class Skills {
         { name: 'VSCode', icon: 'vscode.svg' },
         { name: 'Postman', icon: 'postman.svg' },
         { name: 'Bash', icon: 'bash.svg' },
+        { name: 'Docker', icon: 'docker.svg' },
       ]
     }
   ];

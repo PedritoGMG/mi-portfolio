@@ -19,7 +19,9 @@ export class Projects {
       { name: "Spring", icon: "spring.svg" },
       { name: "H2 Database", icon: "h2.png" },
       { name: "Angular", icon: "angular.svg" },
-      { name: "Bootstrap", icon: "bootstrap5.svg" }
+      { name: "Bootstrap", icon: "bootstrap5.svg" },
+      { name: "Python", icon: "python.svg" },
+      { name: "Docker", icon: "docker.svg" },
     ],
     link: "https://github.com/PedritoGMG/TransferNow"
   },
